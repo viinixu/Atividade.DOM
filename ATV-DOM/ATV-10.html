@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            gap: 15px;
+            margin-top: 50px;
+        }
+
+        .bloco {
+            width: 60px;
+            height: 60px;
+            background-color: gray; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="bloco"></div>
+        <div class="bloco"></div>
+        <div class="bloco"></div>
+        <div class="bloco"></div>
+        <div class="bloco"></div>
+    </div>
+
+    <script>
+            let blocos = document.getElementsByClassName('bloco');
+
+            blocos[0].style.backgroundColor = "red";
+            blocos[1].style.backgroundColor = "orange";
+            blocos[2].style.backgroundColor = "yellow";
+            blocos[3].style.backgroundColor = "green";
+            blocos[4].style.backgroundColor = "blue";
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            gap: 10px;
+        }
+
+        #quadrado {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+
+        #circulo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="quadrado"></div>
+        <div id="circulo"></div>
+    </div>
+
+    <script>
+        window.onload = function() {
+            let quadrado = document.getElementById("quadrado");
+            let circulo = document.getElementById("circulo");
+
+            let ultimoEstado = localStorage.getItem("estadoCores") || "estado1";
+
+            if (ultimoEstado === "estado1") {
+                quadrado.style.backgroundColor = "red";
+                circulo.style.backgroundColor = "blue";
+                localStorage.setItem("estadoCores", "estado2");
+            } else {
+                quadrado.style.backgroundColor = "blue";
+                circulo.style.backgroundColor = "red";
+                localStorage.setItem("estadoCores", "estado1");
+            }
+        };
+    </script>
+
+</body>
+
+</html>
