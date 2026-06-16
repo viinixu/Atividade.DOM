@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #circulo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            background-color: red;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="circulo"></div>
+    <button id="botao">Mudar para Verde</button>
+
+    <script>
+        let circulo = document.querySelector("#circulo");
+        let botao = document.querySelector("#botao");
+
+        function transformar() {
+            circulo.style.backgroundColor = "green";
+        }
+
+        botao.onclick = transformar;
+    </script>
+
+</body>
+
+</html>
