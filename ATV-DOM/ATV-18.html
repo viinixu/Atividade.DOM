@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .quadrado {
+            width: 250px;
+            height: 250px;
+            background-color: white;
+            margin-bottom: 10px;
+            transition: background-color 1s ease;
+            margin: 20px;
+        }
+
+        .quadrado:nth-of-type(1) {
+            transition-delay: 1s;
+        }
+
+        .quadrado:nth-of-type(2) {
+            transition-delay: 2s;
+        }
+
+        .quadrado:nth-of-type(3) {
+            transition-delay: 3s;
+        }
+
+        #botao {
+            margin-top: 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="quadrado"></div>
+    <div class="quadrado"></div>
+    <div class="quadrado"></div>
+
+    <button id="botao">COLORIR</button>
+
+    <script>
+        let quadrado = document.getElementsByClassName("quadrado");
+        let botao = document.querySelector("#botao");
+
+        function colorirQuadra() {
+            quadrado[0].style.backgroundColor = "red";
+            quadrado[1].style.backgroundColor = "green";
+            quadrado[2].style.backgroundColor = "blue";
+        }
+
+        botao.onclick = colorirQuadra;
+    </script>
+</body>
+
+</html>

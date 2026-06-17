@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #quadrado {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            margin-bottom: 15px;
+            justify-self: center;
+        }
+        #container{
+            justify-self: center;
+            text-align: center;
+            margin-top: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+    <div id="quadrado"></div>
+    <button id="botaoR">Mudar para Rosa</button>
+    <button id="botaoA">Mudar para Azul</button>
+    </div>
+
+    <script>
+        let quadrado = document.querySelector("#quadrado");
+        let botao1 = document.querySelector("#botaoR");
+        let botao2 = document.querySelector("#botaoA");
+
+
+        function transformar1() {
+            quadrado.style.backgroundColor = "pink";
+        }
+
+        function transformar2() {
+            quadrado.style.backgroundColor = "Blue";
+        }
+
+        botaoR.onclick = transformar1;
+        botaoA.onclick = transformar2;
+    </script>
+
+</body>
+
+</html>

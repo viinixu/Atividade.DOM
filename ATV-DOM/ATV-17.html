@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        #quadrado {
+            width: 1000px;
+            height: 500px;
+            background-color: orange;
+            margin-bottom: 15px;
+            border: solid 0.5px;
+            justify-self: center;
+
+            transition: background-color 1.5s ease; 
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <div id="quadrado"></div>
+    <button id="botao">LIMPAR</button>
+
+    <script>
+        let quadrado = document.querySelector("#quadrado");
+        let botao = document.querySelector("#botao");
+
+        function limparLaranja() {
+            quadrado.style.backgroundColor = "white";
+        }
+
+        botao.onclick = limparLaranja;
+    </script>
+
+</body>
+
+</html>

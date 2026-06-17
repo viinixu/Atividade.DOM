@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #retangulo {
+            width: 300px;
+            height: 200px;
+            background-color: white;
+            margin-bottom: 15px;
+            border: solid 0.2px;
+            text-align: center;
+        }
+
+        #texto {
+            margin-top: 80px;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="retangulo">
+        <p id="texto">MODO DIA ATIVADO</p>
+    </div>
+    <button id="botao">MODO ESCURO</button>
+
+    <script>
+        let retangulo = document.querySelector("#retangulo");
+        let botao = document.querySelector("#botao");
+        let eTexto = document.getElementById("texto");
+
+        function transformar() {
+            retangulo.style.backgroundColor = "black";
+            eTexto.innerText = "MODO NOITE ATIVADO";
+            eTexto.style.color = "white";
+        }
+
+
+        botao.onclick = transformar;
+    </script>
+
+</body>
+
+</html>

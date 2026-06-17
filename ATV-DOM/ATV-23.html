@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Extra</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        #caixa {
+            width: 200px;
+            height: 200px;
+            border-radius: 80px;
+            background-color: red;
+            margin-bottom: 20px;
+        }
+
+        #botao {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="caixa"></div>
+    <button id="botao">Alternar Cor</button>
+
+    <script>
+        let caixa = document.getElementById("caixa");
+        let botao = document.getElementById("botao");
+
+        function alternar() {
+            if (caixa.style.backgroundColor === "red") {
+                caixa.style.backgroundColor = "green";
+            } else {
+                caixa.style.backgroundColor = "red";
+            }
+        }
+
+        botao.onclick = alternar;
+    </script>
+
+</body>
+
+</html>
